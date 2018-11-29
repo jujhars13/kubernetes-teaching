@@ -60,9 +60,7 @@ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   --serviceaccount=default:cluster-admin-dashboard-sa
 
 # get the login token for the new service account
-TOKEN=$(kubectl describe secret $(kubectl -n kube-system get secret | awk '/^cluster-admin-dashboard-sa-token-/{print $1}') | awk '$1=="token:"{print $2}')
-
-echo $TOKEN
+TOKEN=$(kubectl describe secret $(kubectl -n kube-system get secret | awk '/^cluster-admin-dashboard-sa-token-/{print $1}') | awk '$1=="token:"{print $2}'); echo $TOKEN
 ```
 
 ### 5. Visit the dashboard
