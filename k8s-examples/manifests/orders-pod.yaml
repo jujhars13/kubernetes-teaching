@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: orders
+  labels:
+    name: orders
+spec:
+  containers:
+  - name: orders
+    image: weaveworksdemos/orders:0.3.0
+    ports:
+    - containerPort: 80

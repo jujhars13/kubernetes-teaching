@@ -13,7 +13,7 @@ const server = http.createServer(requestHandler);
 
 server.listen(port, (err) => {
   if (err) {
-    console.error('oops', JSON.stringify(err));
+    console.error('oops', err);
   }
   console.log(`server v.${version} is listening on ${port}`);
 });

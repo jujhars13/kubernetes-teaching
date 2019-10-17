@@ -1,0 +1,12 @@
+{
+  "name": "simple-server",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Simple HTTP server that prints out ENV vars and CLI args",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

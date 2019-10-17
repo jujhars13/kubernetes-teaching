@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shipping
+  labels:
+    name: shipping
+spec:
+  containers:
+  - name: shipping
+    image: weaveworksdemos/shipping:0.3.0
+    ports:
+    - containerPort: 80

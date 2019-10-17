@@ -1,0 +1,20 @@
+{
+  "name": "node-cms",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Simple file based CMS system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "concat-stream": "^1.5.1",
+    "minimist": "^1.2.0",
+    "mongodb": "^2.1.0",
+    "routes-router": "^4.2.1",
+    "uuid": "^2.0.1"
+  }
+}

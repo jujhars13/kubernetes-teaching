@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user-db
+  labels:
+    name: user-db
+spec:
+  containers:
+  - name: user-db
+    image: weaveworksdemos/user-db:0.3.0
+    ports:
+    - name: mongo
+      containerPort: 27017

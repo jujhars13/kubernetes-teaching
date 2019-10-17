@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cart
+  labels:
+    name: cart
+spec:
+  containers:
+  - name: cart
+    image: weaveworksdemos/cart:0.3.0
+    ports:
+    - containerPort: 80

@@ -1,0 +1,14 @@
+{
+  "name": "redis-webserver",
+  "private": true,
+  "version": "1.0.0",
+  "description": "example webserver connecting to postgres",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "async": "^2.1.4",
+    "minimist": "^1.2.0",
+    "redis": "^2.6.5"
+  },
+  "devDependencies": {}
+}

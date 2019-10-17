@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: catalogue-db
+  labels:
+    name: catalogue-db
+spec:
+  containers:
+  - name: catalogue-db
+    image: weaveworksdemos/catalogue-db:0.2.0
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: fake_password
+      - name: MYSQL_DATABASE
+        value: socksdb
+    ports:
+    - name: mysql
+      containerPort: 3306

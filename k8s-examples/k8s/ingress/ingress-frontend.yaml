@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  namespace: sock-shop
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+spec:
+  backend:
+    serviceName: front-end
+    servicePort: 80

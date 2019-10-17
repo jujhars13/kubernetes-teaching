@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: orders-db
+  labels:
+    name: orders-db
+spec:
+  containers:
+  - name: orders-db
+    image: mongo
+    ports:
+    - name: mongo
+      containerPort: 27017
