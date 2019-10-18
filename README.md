@@ -22,16 +22,16 @@ examples in `server/' directory
 
 ## Kubernetes Steps
 
-- [ ] Create a pod manifest
-  - [ ] Deploy pod
-  - [ ] inspect pod, describe pod
-  - [ ] Port forward into pod
-  - [ ] check pod logs
-  - [ ] delete pod
-  - [ ] re-deploy pod
-  - [ ] create namespace
-  - [ ] put pod into namespace
-  - [ ] delete your old pod
+- [X] Create a pod manifest
+  - [x] Deploy pod
+  - [X] inspect pod, describe pod
+  - [x] Port forward into pod
+  - [x] check pod logs
+  - [x] delete pod
+  - [x] re-deploy pod
+  - [x] create namespace
+  - [x] put pod into namespace
+  - [x] delete your old pod
 
 - [ ] How does Kuberentes work ?
   - Deploy kubelet `https://storage.googleapis.com/kubernetes-release/release/v1.0.3/bin/linux/amd64/kubelet`
@@ -50,10 +50,10 @@ examples in `server/' directory
   - [x] revert a deploy
 - [x] Create a service manifest
   - [x] Deploy internal service
-  - [ ] deploy external layer 4 service
-- [ ] Create a GKE ingress controller
-  - [ ] Deploy and test
-  - [ ] Configure multiple routes to multiple services
+  - [x] deploy external layer 4 service
+- [x] Create a GKE ingress controller
+  - [x] Deploy and test
+  - [x] Configure multiple routes to multiple services
 - [ ] Extras
   - Create a cluster in AWS
   - cordon, drain and delete a node
