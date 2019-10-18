@@ -86,4 +86,6 @@ kubectl -n "${NAMESPACE}" scale --replicas=8 deployment potato-deployment
 # roll back
 kubectl -n "${NAMESPACE}" rollout undo deployment/potato-deployment
 
+# all the things
+kubectl -n "${NAMESPACE}" get all
 ```

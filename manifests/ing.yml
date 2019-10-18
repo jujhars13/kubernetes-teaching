@@ -3,13 +3,11 @@ kind: Namespace
 metadata:
   name: jujhar
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   namespace: jujhar
   name: test-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - http:
