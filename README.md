@@ -39,7 +39,7 @@ examples in `server/' directory
   - docker ps
   - Check kubelet info `curl localhost://10255/healthz`, `curl localhost://10255/spec`
   - tear down
-- [ ] Create a replica-set and deployment 
+- [ ] Create a replica-set and deployment
   - [ ] Deploy
   - [ ] Port-forward into pod
   - [ ] Tweak environment variables
@@ -57,10 +57,11 @@ examples in `server/' directory
   - [ ] Configure multiple routes to multiple services
 - [ ] Extras
   - Create a cluster in AWS
+  - cordon, drain and delete a node
 
 
 ## Links
- - [deployment strategies](https://github.com/Signorini/k8s-deployment-strategies)  
+ - [deployment strategies](https://github.com/Signorini/k8s-deployment-strategies)
 
 ## Useful Commands
 
@@ -78,4 +79,8 @@ myContainer
 
 # To fire up an interactive pod into namespace
 kubectl -n "${NAMESPACE}" run shell --rm -it --tty --image ubuntu -- bash
+
+# scale a deployment
+kubectl -n "${NAMESPACE}" scale --replicas=8 deployment potato-deployment
+
 ```
