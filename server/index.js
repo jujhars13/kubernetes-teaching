@@ -6,6 +6,7 @@ const requestHandler = (request, response) => {
   response.setHeader('Content-Type', 'application/json');
   response.statusCode = 200;
   const out = { message: 'Your friendly JSON server', 'version': version };
+  console.log(`accessed: ${new Date().toString()}`);
   response.end(JSON.stringify(out));
 };
 

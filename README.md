@@ -29,6 +29,10 @@ examples in `server/' directory
   - [ ] check pod logs
   - [ ] delete pod
   - [ ] re-deploy pod
+  - [ ] create namespace
+  - [ ] put pod into namespace
+  - [ ] delete your old pod
+
 - [ ] How does Kuberentes work ?
   - Deploy kubelet `https://storage.googleapis.com/kubernetes-release/release/v1.0.3/bin/linux/amd64/kubelet`
   - point kubelet to a directory `./kubelet --config=${PWD}/manifests`
@@ -51,5 +55,27 @@ examples in `server/' directory
 - [ ] Create a GKE ingress controller
   - [ ] Deploy and test
   - [ ] Configure multiple routes to multiple services
+- [ ] Extras
+  - Create a cluster in AWS
+
 
 ## Links
+ - [deployment strategies](https://github.com/Signorini/k8s-deployment-strategies)  
+
+## Useful Commands
+
+```bash
+
+# mount volumes
+docker run -it \
+-v ${PWD}/app:/app \
+myContainer
+
+# env vars
+docker run -it \
+-e NODE_ENV=production \
+myContainer
+
+# To fire up an interactive pod into namespace
+kubectl -n "${NAMESPACE}" run shell --rm -it --tty --image ubuntu -- bash
+```
