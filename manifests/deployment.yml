@@ -12,6 +12,9 @@ metadata:
   labels:
     app: potato
 spec:
+  selector:
+    matchLabels:
+      app: potato
   replicas: 3
   minReadySeconds: 5
   strategy:
