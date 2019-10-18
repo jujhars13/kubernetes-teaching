@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: namespace
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: potato-badasses
+  labels:
+    app: potato-badasses
+    colors: blue
+    dev: badass
+spec:
+  containers:
+    - name: web
+      image: roubleknew/k8s-training:v2
+      ports:
+        - name: web
+          containerPort: 3000
+          protocol: TCP
+      env:
+        - name: VERSION
+          value: "1.1.2.3.2.2.2"
+        - name: NODE_ENV
+          value: "production"

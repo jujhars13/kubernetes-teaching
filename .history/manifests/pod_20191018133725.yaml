@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jujhar
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: potato-deployment
+  namespace: jujhar
+  labels:
+    app: potato
+spec:
+  replicas: 3
+  minReadySeconds: 5
+  strategy:
+    # indicate which strategy we want for rolling update
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  template:
+    metadata:
+      labels:
+        app: potato
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: web
+          image: roubleknew/k8s-training:v2
+          ports:
+            - name: web
+              containerPort: 3000
+              protocol: TCP
+          env:
+            - name: VERSION
+              value: "1.1.2.3.2.2.2"
+            - name: NODE_ENV
+              value: "production"
+
+---
+# env variables for sikhnet api php container
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-sikhnet-com-env-config
+  namespace: $N_NAMESPACE
+data:
+  DB_DRIVER: mysqli
+  DB_PORT: "3306"
+  DB_HOST: dbproxy.$N_NAMESPACE.svc.cluster.local
+  DB_NAME: testDb
+  DB_USER: test-user
+  DB_PASSWORD: "password" # need to move to secret map
+  REDIS_HOST: redis.$N_NAMESPACE.svc.cluster.local
+  REDIS_PORT: "6379"
+  GOOGLE_APPLICATION_CREDENTIALS: "/app/config/firebase-key-dev.json"
+  ENVIRONMENT: $N_ENVIRONMENT
+  ENV: $N_ENVIRONMENT
+  VERSION: "$CONTAINER_VERSION"
+  LOG_LEVEL: WARNING

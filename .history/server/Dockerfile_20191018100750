@@ -1,0 +1,3 @@
+FROM node:12
+
+ADD index.js /app/index.js

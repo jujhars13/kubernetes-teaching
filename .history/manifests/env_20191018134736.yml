@@ -1,0 +1,17 @@
+---
+# env variables for sikhnet api php container
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-sikhnet-com-env-config
+  namespace: $N_NAMESPACE
+data:
+  DB_DRIVER: mysqli
+  DB_PORT: "3306"
+  DB_HOST: mysql.jujhar.svc.cluster.local
+  DB_NAME: testDb
+  DB_USER: test-user
+  DB_PASSWORD: "password" # need to move to secret map
+  ENVIRONMENT: production
+  VERSION: "1.22.2.2"
+  LOG_LEVEL: WARNING

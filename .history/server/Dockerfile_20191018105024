@@ -1,0 +1,15 @@
+FROM node:12
+
+ADD index.js /app/index.js
+
+# env vars
+ENV VERSION "potato"
+ENV NODE_ENV "development"
+
+# buildtime only
+#RUN "ls /app"
+
+EXPOSE 3000
+
+# runtime only
+CMD ["node", "/app/index.js"]
