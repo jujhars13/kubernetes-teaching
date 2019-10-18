@@ -1,5 +1,7 @@
 # kubernetes-teaching
-Teaching Kubernetes 101 and 201 courses
+Teaching Kubernetes 101 and 201 courses for various teams
+
+- 2019-10-18 - BrumJs
 
 ## Prereqs
 - GCP cloud login
