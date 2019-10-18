@@ -1,9 +1,0 @@
-FROM node:12
-
-ADD index.js /app/index.js
-
-# buildtime only
-RUN "ls /app"
-
-# runtime only
-CMD 

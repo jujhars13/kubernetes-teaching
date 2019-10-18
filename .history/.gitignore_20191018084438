@@ -1,9 +1,0 @@
-var/cache
-.idea/*
-id_rsa
-nohup.out
-config/env.ini
-web/docs
-build/db/*.sql
-.vscode
-.history.
