@@ -13,7 +13,7 @@
     "async": "^1.5.0",
     "concat-stream": "^1.5.1",
     "minimist": "^1.2.0",
-    "mongodb": "^2.1.0",
+    "mongodb": "^3.6.1",
     "routes-router": "^4.2.1",
     "uuid": "^2.0.1"
   }
